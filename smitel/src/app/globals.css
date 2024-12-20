@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  margin: 10px 0 10px 0;
+}
+
+.divSmall {
+  flex: 1;
+  transition: flex 0.3s ease;
+  background-color: lightblue;
+  margin: 0 5px;
+}
+
+.divLarge {
+  flex: 2;
+  transition: flex 0.3s ease;
+  background-color: rebeccapurple;
+  margin: 0 5px;
+}
+
+.divSmall.expanded {
+  flex: 2;
+}
+
+.divSmall.shrunk {
+  flex: 1;
+}
+
+.divLarge.expanded {
+  flex: 2;
+}
+
+.divLarge.shrunk {
+  flex: 1;
+}
